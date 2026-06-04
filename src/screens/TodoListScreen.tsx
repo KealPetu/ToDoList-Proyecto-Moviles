@@ -128,8 +128,8 @@ export function TodoListScreen() {
     );
 
     const handleDelete = useCallback(
-        (id: string) => {
-            deleteTodo(id);
+        async (id: string) => {
+            await deleteTodo(id);
         },
         [deleteTodo]
     );

@@ -2,12 +2,15 @@
 
 import React from "react";
 import { StorageProvider } from "./src/context/StorageContext";
-import { TodoListScreen } from "./src/screens/TodoListScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { AppNavigator } from "./src/navigation/AppNavigator";
 
 export default function App() {
   return (
     <StorageProvider initialEngine="sqlite">
-      <TodoListScreen />
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
     </StorageProvider>
   );
 }
