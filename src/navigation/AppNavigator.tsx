@@ -3,11 +3,13 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { TodoListScreen } from '../screens/TodoListScreen';
 import { RestScreen } from '../screens/RestScreen';
+import { SecretsScreen } from '../screens/SecretsScreen';
 
 // Tipado de las rutas
 export type RootTabParamList = {
     TareasLocal: undefined;
     RedRest: undefined;
+    Secretos: undefined;
 };
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
@@ -38,6 +40,13 @@ export function AppNavigator() {
                 component={RestScreen}
                 options={{
                     tabBarLabel: 'Red REST',
+                }}
+            />
+            <Tab.Screen
+                name="Secretos"
+                component={SecretsScreen}
+                options={{ 
+                    tabBarLabel: 'Secretos',
                 }}
             />
         </Tab.Navigator>
