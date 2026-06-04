@@ -8,10 +8,10 @@ import {
     TouchableOpacity,
     StyleSheet,
     ActivityIndicator,
-    SafeAreaView,
     Keyboard,
     Platform,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // ─── Paleta de Colores ─────────────
 const COLORS = {
@@ -182,7 +182,10 @@ export function RestScreen() {
 
 // ─── Estilos ────────────────────────────────────────────────────────
 const styles = StyleSheet.create({
-    safeArea: { flex: 1, backgroundColor: COLORS.bg },
+    safeArea: {
+        flex: 1,
+        backgroundColor: COLORS.bg,
+    },
     appBar: {
         paddingHorizontal: 20,
         paddingTop: Platform.OS === "android" ? 16 : 8,

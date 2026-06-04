@@ -11,9 +11,9 @@ import {
     ActivityIndicator,
     RefreshControl,
     StatusBar,
-    SafeAreaView,
     Platform,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useStorage } from "../context/StorageContext";
 import { Todo } from "../models/Todo";
 import { TodoItem } from "../components/TodoItem";
