@@ -7,7 +7,7 @@ export function RestScreen() {
         <SafeAreaView style={styles.container}>
             <View style={styles.content}>
                 <Text style={styles.title}>Módulo REST</Text>
-                <Text style={styles.subtitle}>Aquí implementaremos JSONPlaceholder</Text>
+                <Text style={styles.subtitle}>Implementación con JSONPlaceholder</Text>
             </View>
         </SafeAreaView>
     );
